@@ -1,0 +1,644 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Variables*/
+/*Mixins*/
+body {
+  /*Marca de Página*/
+}
+
+body h1 {
+  text-align: center;
+  color: #E8B0A7;
+  font-family: 'Orelega One', cursive;
+  font-size: 45px;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+  background-image: url(Img/vestiditos.png);
+  margin: 0;
+  min-height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body h1:hover {
+  color: #007886;
+}
+
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body header {
+  /*Barra de Inicio*/
+}
+
+body header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-position: center;
+  background-color: #007886;
+  font: normal 18px "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+body header .menu a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  height: 65px;
+}
+
+body header .menu a:hover {
+  color: #007886;
+  background-color: #E8B0A7;
+  height: 100px;
+  -webkit-transition: height 2s;
+  transition: height 2s;
+}
+
+body main {
+  /*--Slider con Productos Destacados y Promos*/
+  /*Galería de Fotos de Productos*/
+  /*Formulario de "Contacto", "Iniciar Sesión" y "Crear Cuenta*/
+  /*Subtítulos de Cuenta"*/
+  /*Carrito de Compras*/
+  /*Tabla de Talles*/
+  /*Subítulos de Carrito*/
+  /*Todos los Botones*/
+}
+
+body main .row {
+  margin-top: 20px;
+}
+
+body main .grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #03afff;
+  border-radius: 4px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  border: solid 1px white;
+}
+
+body main .grid-item:hover {
+  -webkit-filter: opacity(0.9);
+          filter: opacity(0.9);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+body main .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (240px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 240px);
+  grid-auto-rows: 359px;
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow: dense;
+}
+
+body main .wide {
+  grid-column: span 3;
+}
+
+body main .wide2 {
+  grid-column: span 2;
+}
+
+body main .wide3 {
+  grid-column: span 5;
+}
+
+body main .form-floating {
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+body main h4 {
+  text-align: center;
+  color: #007886;
+  text-decoration: none;
+  word-spacing: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+body main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body main .container-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .productos {
+  -webkit-box-flex: 0.75;
+      -ms-flex: 0.75;
+          flex: 0.75;
+}
+
+body main .producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid silver;
+  margin-bottom: 20px;
+}
+
+body main .producto:hover {
+  border: none;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+body main .producto img {
+  width: 300px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body main .producto img:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+body main .info {
+  padding: 20px;
+  width: 100%;
+  position: relative;
+}
+
+body main .info-nombre, body main .info-precio, body main .info-promo {
+  margin-bottom: 20px;
+}
+
+body main .trash {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 25px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+body main .trash:hover {
+  background-color: white;
+  color: red;
+  font-weight: 600;
+  border: 1px solid red;
+}
+
+body main .fa {
+  margin-right: 5px;
+}
+
+body main .main__tabla {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 45px;
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+body main tr th {
+  color: white;
+  background-color: #a1304e;
+  font-size: 15px;
+}
+
+body main tr td {
+  font-size: 14px;
+}
+
+body main h5 {
+  text-align: center;
+  color: #007886;
+  text-decoration: none;
+  word-spacing: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+body main .boton {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+body main .boton2 {
+  color: white;
+  background-color: #007886;
+  border-color: #007886;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 40px;
+  width: 300px;
+  margin-top: 10px;
+}
+
+body main .boton2:hover {
+  color: #007886;
+  background-color: #E8B0A7;
+  border-color: #E8B0A7;
+  text-decoration: none;
+}
+
+body main .boton3, body main .boton4 {
+  color: white;
+  background-color: #a1304e;
+  border-color: #a1304e;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 40px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+body main .boton3:hover, body main .boton4:hover {
+  color: #007886;
+  background-color: #E8B0A7;
+  border-color: #E8B0A7;
+  text-decoration: none;
+}
+
+body main .boton4 {
+  background-color: #007886;
+  border-color: #007886;
+}
+
+body main .boton4:hover {
+  color: #007886;
+  background-color: #E8B0A7;
+  border-color: #E8B0A7;
+  text-decoration: none;
+}
+
+body footer {
+  margin: 0;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body footer ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+body footer ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 30px;
+  color: #007886;
+  -webkit-transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.31);
+  transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.31);
+}
+
+body footer ul li a:hover {
+  color: #fff;
+}
+
+body footer ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #007886;
+  border-radius: 50%;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body footer ul li a:hover:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+body footer ul li:nth-child(1) a:hover:before {
+  background-color: #3b5999;
+}
+
+body footer ul li:nth-child(3) a:hover:before {
+  background-color: #55acee;
+}
+
+body footer ul li:nth-child(2) a:hover:before {
+  background-color: #e4405f;
+}
+
+/*MQ Mobile*/
+@media (max-width: 320px) {
+  body {
+    /*Marca de la Página*/
+  }
+  body h1 {
+    text-align: center;
+    font-size: 45px;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-name: aparecer;
+            animation-name: aparecer;
+    background-image: url(Img/vestiditos.png);
+    margin: 0;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  body header {
+    /*Barra de Inicio*/
+  }
+  body header .menu {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    word-spacing: 0px;
+  }
+  body header a {
+    padding: 20px;
+    text-decoration: none;
+    height: 65px;
+  }
+  body header a:hover {
+    height: 100px;
+    -webkit-transition: height 2s;
+    transition: height 2s;
+  }
+  body main {
+    /*Galería de Fotos de Productos*/
+    /*Carrito de Compras*/
+    /*Tabla de Talles*/
+    /*Todos los Botones*/
+    /*Tabla de Talles*/
+  }
+  body main .wide {
+    grid-column: span 1;
+  }
+  body main .wide2 {
+    grid-column: span 1;
+  }
+  body main .wide3 {
+    grid-column: span 1;
+  }
+  body main h5 {
+    font-size: 9px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  body main .producto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid silver;
+    margin-bottom: 20px;
+  }
+  body main .producto:hover {
+    border: none;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  body main .producto img {
+    width: 220px;
+    height: 280px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body main .producto img:hover {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+  }
+  body main .info {
+    padding: 20px;
+    width: 100%;
+    position: relative;
+  }
+  body main .info-nombre, body main .info-precio, body main .info-promo {
+    margin-bottom: 20px;
+  }
+  body main .trash {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 25px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  body main .trash:hover {
+    background-color: white;
+    color: red;
+    font-weight: 600;
+    border: 1px solid red;
+  }
+  body main .fa {
+    margin-right: 5px;
+  }
+  body main .main__tabla {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    width: 300px;
+    margin-bottom: 50px;
+  }
+  body main tr th {
+    color: white;
+    background-color: #a1304e;
+    font-size: 15px;
+  }
+  body main tr td {
+    font-size: 14px;
+  }
+  body main .boton {
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
+  }
+  body main .boton2 {
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 40px;
+    width: 160px;
+  }
+  body main .boton2:hover {
+    text-decoration: none;
+  }
+  body main .boton3, body main .boton4 {
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 40px;
+    width: 110px;
+  }
+  body main .boton3:hover, body main .boton4:hover {
+    text-decoration: none;
+  }
+  body main .boton4 {
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 40px;
+    width: 90px;
+  }
+  body main .boton4:hover {
+    text-decoration: none;
+  }
+  body main .main__tabla {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  body main tr th {
+    font-size: 10px;
+  }
+  body main tr td {
+    font-size: 10px;
+  }
+}
+
+/*MQ Tablat*/
+@media (max-width: 768px) {
+  body {
+    /*Galería de Fotos de Productos*/
+  }
+  body .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (240px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 240px);
+    grid-auto-rows: 359px;
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+  }
+  body .wide {
+    grid-column: span 1;
+  }
+  body .wide2 {
+    grid-column: span 1;
+  }
+  body .wide3 {
+    grid-column: span 1;
+  }
+}
+/*# sourceMappingURL=EstilosVestiditos.css.map */

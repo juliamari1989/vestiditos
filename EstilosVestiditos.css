@@ -166,21 +166,8 @@ body main h4 {
   text-transform: uppercase;
 }
 
-body main .container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-body main .container-carrito {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 body main .productos {
-  -webkit-box-flex: 0.75;
-      -ms-flex: 0.75;
-          flex: 0.75;
+  margin: 0 auto;
 }
 
 body main .producto {
@@ -192,6 +179,7 @@ body main .producto {
   overflow: hidden;
   border: 1px solid silver;
   margin-bottom: 20px;
+  margin: 0 auto;
 }
 
 body main .producto:hover {

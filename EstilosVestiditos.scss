@@ -86,7 +86,6 @@ body{
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #03afff;
             border-radius: 4px;
             transition: transform 0.3s ease-in-out;
             border: solid 1px rgb(255, 255, 255);
@@ -95,6 +94,66 @@ body{
                 filter: opacity(0.9);
                 transform:scale(1.04);
             }  
+        }
+
+        .item-1{
+            background-image: url(Img/vestido-agustina.png);
+        }
+
+        .item-2{
+            background-image: url(Img/vestido-analia.png);
+        }
+
+        .item-3{
+            background-image: url(Img/vestido-eugenia.png);
+        }
+
+        .item-4{
+            background-image: url(Img/vestido-julia.png);
+        }
+
+        .item-5{
+            background-image: url(Img/vestido-noemi.png);
+        }
+
+        .item-6{
+            background-image: url(Img/falda-betty.png);
+        }
+
+        .item-7{
+            background-image: url(Img/falda-camila.png);
+        }
+
+        .item-8{
+            background-image: url(Img/falda-emilia.png);
+        }
+
+        .item-9{
+            background-image: url(Img/falda-laura.png);
+        }
+
+        .item-10{
+            background-image: url(Img/falda-mechi.png);
+        }
+
+        .item-11{
+            background-image: url(Img/camisa-alcira.png);
+        }
+
+        .item-12{
+            background-image: url(Img/camisa-celeste.png);
+        }
+
+        .item-13{
+            background-image: url(Img/camisa-juanita.png);
+        }
+
+        .item-14{
+            background-image: url(Img/camisa-julieta.png);
+        }
+
+        .item-15{
+            background-image: url(Img/camisa-silvia.png);
         }
 
         .grid-container{
@@ -107,14 +166,17 @@ body{
         }
 
         .wide{
+            background-image: url(Img/vestido-ventana.png);
             grid-column: span 3;
         }
 
         .wide2{
+            background-image: url(Img/vestido-cartera.png);
             grid-column: span 2;
         }
 
         .wide3{
+            background-image: url(Img/vestido-final.png);
             grid-column: span 5;
         }
 

@@ -110,7 +110,6 @@ body main .grid-item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #03afff;
   border-radius: 4px;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
@@ -126,6 +125,66 @@ body main .grid-item:hover {
           transform: scale(1.04);
 }
 
+body main .item-1 {
+  background-image: url(Img/vestido-agustina.png);
+}
+
+body main .item-2 {
+  background-image: url(Img/vestido-analia.png);
+}
+
+body main .item-3 {
+  background-image: url(Img/vestido-eugenia.png);
+}
+
+body main .item-4 {
+  background-image: url(Img/vestido-julia.png);
+}
+
+body main .item-5 {
+  background-image: url(Img/vestido-noemi.png);
+}
+
+body main .item-6 {
+  background-image: url(Img/falda-betty.png);
+}
+
+body main .item-7 {
+  background-image: url(Img/falda-camila.png);
+}
+
+body main .item-8 {
+  background-image: url(Img/falda-emilia.png);
+}
+
+body main .item-9 {
+  background-image: url(Img/falda-laura.png);
+}
+
+body main .item-10 {
+  background-image: url(Img/falda-mechi.png);
+}
+
+body main .item-11 {
+  background-image: url(Img/camisa-alcira.png);
+}
+
+body main .item-12 {
+  background-image: url(Img/camisa-celeste.png);
+}
+
+body main .item-13 {
+  background-image: url(Img/camisa-juanita.png);
+}
+
+body main .item-14 {
+  background-image: url(Img/camisa-julieta.png);
+}
+
+body main .item-15 {
+  background-image: url(Img/camisa-silvia.png);
+}
+
 body main .grid-container {
   display: -ms-grid;
   display: grid;
@@ -138,14 +197,17 @@ body main .grid-container {
 }
 
 body main .wide {
+  background-image: url(Img/vestido-ventana.png);
   grid-column: span 3;
 }
 
 body main .wide2 {
+  background-image: url(Img/vestido-cartera.png);
   grid-column: span 2;
 }
 
 body main .wide3 {
+  background-image: url(Img/vestido-final.png);
   grid-column: span 5;
 }
 

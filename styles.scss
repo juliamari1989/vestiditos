@@ -1,0 +1,1106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Variables*/
+$rosa: #E8B0A7;
+$petroleo: #007886;
+$magenta: #a1304e;
+$font: 'Montserrat', sans-serif;
+
+/*Mixins*/
+@mixin sizes($height, $width){
+    height: $height;
+    width: $width;
+ }
+
+/*DESKTOP*/
+body{
+
+    /*TODAS LAS PESTAÑAS REPITEN PROMO, PORTADA Y HEADER*/
+    
+    /*Promo de 3x2*/
+    .ad-promo{
+        background-color: $magenta;
+        padding: 15px;
+        text-align: center;
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-family: $font;
+            text-transform: uppercase;
+            font-size: 13px;  
+        }
+    }
+
+    /*Portada*/
+    h1{
+        animation-duration: 5s;
+        animation-name: aparecer;
+        background-image: url(Img/vestiditos.png);
+        margin: 0;
+        min-height: 80vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        text-align:center;
+        color: $petroleo;
+        font-family: 'Orelega One', cursive;
+        font-size: 45px;
+
+        &:hover{
+            color: $rosa;
+        }  
+    }
+
+    @keyframes aparecer {
+        0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+    }
+    
+    header{
+        width: 300;
+        background: $petroleo;
+
+        /*Menú Desktop*/
+        .desktop-menu{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-position: center;
+            background-color: $petroleo;
+            font-size: 20px;
+            font-family: $font;
+            text-transform: uppercase;
+
+            a{
+                color:white;
+                padding: 20px;
+                text-decoration: none;
+                height: 65px;
+
+                &:hover{
+                    color: white;
+                    background-color: $rosa;
+                    height: 100px;
+                    transition: height 2s;
+                }
+                
+                .fas{
+                    padding-top: 5px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        /*Menú Hamburguesa*/
+        .hamburger-menu{
+            display: none;
+        }
+
+        .hamburger-list{
+            display: none;
+
+            li{
+                list-style: none; 
+
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+
+        input:checked  ~ ul{
+            display:block;
+        }
+
+        input{
+            display: none;
+        }
+    }
+    
+    main{      
+
+        /*TODAS LAS PESTAÑAS REPITEN EL MISMO H2*/
+
+        h2{
+            text-align: center;
+            color: $petroleo;
+            text-decoration: none;
+            word-spacing: 3px;
+            font-family: $font;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        /*MAIN INDEX*/
+
+        /*--Slider con Productos Destacados y Promos*/
+        .carousel-container{
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .row{
+            margin-top: 20px;
+        }
+
+        /*MAIN PRODUCTOS*/
+
+        /*Listado de Productos*/
+        .container{
+            width: 90%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3em;
+            margin-bottom: 3em;
+            display: grid;
+            grid-gap: 30px;
+        }   
+        
+        /*Productos en Color Petróleo*/
+        .producto-petroleo{
+            background-color: $petroleo;
+            cursor: pointer;
+            box-shadow: 0 0 5px 0 rgba(0,0,0,.095); 
+            transition: all 300ms;
+            position: relative;
+        }  
+
+        .producto-petroleo::after {
+            content: "";
+            background-color: rgba(179, 229, 252, .1);
+            @include sizes(100%, 100%);
+            position: absolute;
+            top:0;
+            left: 0;
+            transform: scale(0);
+            transition: all 300ms;
+            opacity: 0;
+        } 
+
+        .producto-petroleo:hover:after{
+            opacity: 1;
+            transform: scale(1);
+        }
+  
+        .producto-petroleo:hover {
+            transform: scale(1.05);
+        }
+        
+        /*Productos en Color Magenta*/
+        .producto-magenta{
+            background-color: $magenta;
+            cursor: pointer;
+            box-shadow: 0 0 5px 0 rgba(0,0,0,.095);            
+            transition: all 300ms;           
+            position: relative;
+        }   
+
+        .producto-magenta::after {
+            content: "";
+            background-color: rgba(179, 229, 252, .1);
+            @include sizes(100%, 100%);
+            position: absolute;
+            top:0;
+            left: 0;
+            transform: scale(0);
+            transition: all 300ms;
+            opacity: 0;
+        }  
+
+        .producto-magenta:hover:after{
+            opacity: 1;
+            transform: scale(1);
+        }  
+
+        .producto-magenta:hover{
+            transform: scale(1.05);
+        }
+        
+        /*Productos en Color Rosa*/
+        .producto-rosa{
+            background-color: $rosa;
+            cursor: pointer;
+            box-shadow: 0 0 5px 0 rgba(0,0,0,.095);
+            transition: all 300ms;
+            position: relative;
+        } 
+
+         .producto-rosa::after {
+            content: "";
+            background-color: rgba(179, 229, 252, .1);
+            @include sizes(100%, 100%);
+            position: absolute;
+            top:0;
+            left: 0;
+            transform: scale(0);
+            transition: all 300ms;
+            opacity: 0;
+        }  
+
+        .producto-rosa:hover:after{
+            opacity: 1;
+            transform: scale(1);
+        }  
+
+        .producto-rosa:hover {
+            transform: scale(1.05);
+        }
+
+        /*Producto e Info*/
+        .item-text{
+            padding: 1em;
+        } 
+
+        .item-img{
+            max-width: 100%;
+            display: block;
+        }  
+
+        .h3-productos{
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            word-spacing: 3px;
+            font-family: $font;
+            font-size: 25px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .price{
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            word-spacing: 3px;
+            font-family: $font;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        /*Botón para ir a Carrito*/
+        .cart-button{
+            color: white;
+            background-color: $petroleo;
+            border-color: $petroleo;
+            font-family: $font;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            @include sizes(40px, 300px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            padding-top: 10px;
+
+            &:hover{
+                color: white;
+                background-color: $magenta;
+                border-color: $magenta;
+                text-decoration: none;
+            }
+        }
+
+        /*MAIN HISTORIA*/
+        
+        /*Historia de Vestiditos*/
+        .historia{
+
+            text-align: center;
+            margin: auto;
+            max-width: 580px;
+
+            p{
+                font-size: 12px;
+                font-family: $font;
+                text-align: justify;
+                margin: auto;
+            }
+        }
+
+        /*"Ten coraje y se amable"*/
+        .quote img{
+            text-align: center;
+            width: 100%;
+            max-width: 728px;
+        }
+
+        /*Firma Julia*/
+        .signature img{
+            text-align: center;
+            width: 100%;
+            max-width: 240px;
+        }
+
+        /*MAIN CUENTA*/
+
+        /*Formulario de "Iniciar Sesión" y "Crear Cuenta*/
+        .form-floating{
+            margin: auto;
+            max-width: 600px;
+        } 
+
+        /*MAIN CARRITO*/
+
+        /*Tabla de Talles*/
+        h4{
+            text-align: center;
+            color: $petroleo;
+            text-decoration: none;
+            word-spacing: 3px;
+            font-family: $font;
+            font-size: 12px;
+            padding-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .main__tabla{
+            text-align: center;
+            margin: auto;
+            @include sizes(45px, 300px);
+
+            tr{
+                th{
+                    color: white;
+                    background-color: $magenta;
+                    font-size: 15px;
+                }
+                td{
+                    font-size: 14px;
+                }
+            }
+        }
+
+        /*Productos en Carrito*/
+        .container-carrito{
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .productos{
+            padding: 10px;
+        }
+
+        .producto{
+            display: flex;
+            @include sizes(200px, 100%);
+            overflow: hidden;
+            border: 1px solid silver;
+            margin-bottom: 20px;
+            margin: 0 auto;
+
+            &:hover{
+                border: none;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+                transform: scale(1.01);
+            }
+
+            img{
+                @include sizes(280px, 300px);
+                object-fit: cover;
+
+                &:hover{
+                    transform: scale(1.04);
+                }
+            }
+        }
+
+        /*Info de Producto*/
+        .info{
+            padding: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        .h3-carrito{
+            text-align: center;
+            color:$petroleo;
+            text-decoration: none;
+            word-spacing: 3px;
+            font-family: $font;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        /*Tachito*/
+        .trash{
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 25px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+
+            &:hover{
+                background-color: white;
+                color: red;
+                font-weight: 600;
+                border: 1px solid red;
+            }
+        } 
+
+        .fa{
+            margin-right: 5px;
+        }
+
+        /*LO SIGUIENTE SE REPITE EN MÁS DE UNA PESTAÑA, PERO NO EN TODAS*/
+
+        /*Botones*/
+        .button{
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button-2{
+            color: white;
+            background-color: $petroleo;
+            border-color: $petroleo;
+            font-family: $font;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            @include sizes(40px, 300px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            &:hover{
+                color: white;
+                background-color: $magenta;
+                border-color: $magenta;
+                text-decoration: none;
+            }
+        }
+
+        .button-3{
+            color: white;
+            background-color: $petroleo;
+            border-color: $petroleo;
+            text-decoration: none;
+            font-family: $font;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            @include sizes(40px, 200px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            &:hover{
+                color: white;
+                background-color: $magenta;
+                border-color: $magenta;
+                text-decoration: none;
+            }
+        }
+
+        .button-4{
+            color: white;
+            background-color: $rosa;
+            border-color: $rosa;
+            text-decoration: none;
+            font-family: $font;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            @include sizes(40px, 200px);
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            &:hover{
+                color: white;
+                background-color: $magenta;
+                border-color: $magenta;
+                text-decoration: none;
+            }
+        }
+
+        /*Beneficios: Envío Gratis, Cuotas y Envíos en 24h.*/
+        .benefits{
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    /*TODAS LAS PESTAÑAS REPITEN EL MISMO FOOTER*/
+
+    footer{
+
+        bottom: 0px;
+        width: 100%;
+        background: $rosa;
+    
+        /*Contenedor de Footer*/
+        .container-footer{
+            display: flex;
+        }
+
+        .container-footer .box{
+            flex-basis: 50%;
+            padding: 10px 20px;
+        }
+
+        .content-footer{
+            max-width: 450px;
+            width: 100%;
+        }
+    
+        /*Subtítulos de Footer*/
+        h5{
+            font-size: 15px;
+            color: white;
+            text-transform: uppercase;
+            font-family: $font;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+        /*Mini Historia de Vestiditos y Redes*/
+        .left .content-footer p{
+            text-align: justify;
+            color: white;
+            font-size: 12px;
+            font-family: $font;
+            padding-right: 70px;
+
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+
+        .left .content-footer .social{
+            margin: 8px 0 0 0;
+    
+            a{
+                padding: 0 2px;
+    
+                span{
+                    @include sizes(40px, 40px);
+                    background: $petroleo;
+                    line-height: 40px;
+                    text-align: center;
+                    font-size: 20px;
+                    border-radius: 5px;
+                    transition: 0.3s;
+                    color: white;
+    
+                    &:hover{
+                        background: $magenta;
+                    }
+                }
+            }
+        }
+    
+        /*Dirección, Teléfono y Email*/
+        .center .content-footer .fas{
+            font-size: 20px;
+            background: $petroleo;
+            @include sizes(45px, 45px);
+            line-height: 45px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            cursor: pointer;
+            color: white;
+    
+            &:hover{
+                background: $magenta;
+            }
+        }
+
+        .center .content-footer .text-footer{
+            font-size: 12px;
+            padding-left: 10px;
+            color: white;
+            font-family: $font;
+            text-transform: none;
+        }
+
+        .text-footer{
+            text-transform: capitalize;
+        }
+        
+        .center .content-footer .phone-footer{
+            margin: 15px 0;
+        }
+    
+        /*Contacto*/
+        .right form .text-footer{
+            font-size: 12px;
+            margin-bottom: 2px;
+            color: white;
+            font-family: $font;
+        }
+
+        .right form .message-footer{
+            margin-top: 10px;
+        }
+
+        .right form input, .right form textarea{
+            width: 100%;
+            font-size: 12px;
+            background: white;
+            padding-left: 10px;
+            border: 1px solid white;
+        }
+
+        .right form input:focus, .right form textarea:focus{
+            outline-color: $rosa;
+        }
+
+        .right form input{
+            height: 35px;
+        }
+
+        .right form .button-footer{
+            margin-top: 10px;
+            text-align: center;
+    
+            button{
+                @include sizes(40px, 400px);
+                border: none;
+                outline: none;
+                background: $petroleo;
+                font-size: 12px;
+                cursor: pointer;
+                transition: .3s;
+                color:white;
+                font-family: $font;
+                text-transform: capitalize;
+    
+                &:hover{
+                    background: $magenta;
+                }
+            }
+        }
+    
+        /*Créditos*/
+        .bottom-footer{
+            padding: 5px;
+            background: $petroleo;
+            text-align: center;
+            font-family: $font;
+            width: 100%;
+    
+            span{
+                color: white;
+                font-size: 10px;
+            }
+
+            a{
+                color: white;
+                text-decoration: none;
+                text-transform: none;
+    
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/*MOBILE*/
+@media (max-width: 480px){
+
+    body{
+
+        /*TODAS LAS PESTAÑAS REPITEN PROMO, PORTADA Y HEADER*/
+
+        /*Aviso Promo*/
+        .ad-promo{
+            padding: 1px;
+
+            a{
+                font-size: 8px;  
+            }
+        }
+
+        /*Portada*/
+        h1{
+            font-size: 20px;
+            min-height: 20vh;
+        } 
+           
+        header{
+            /*Menú Destkop*/
+            .desktop-menu{
+                display: none;
+            }
+
+            /*Menú Hamburguesa*/
+            .hamburger-menu{
+                display: block;
+    
+                .fa{
+                    color: white;
+                    font-size: 15px;
+                    padding: 15px;
+                }
+            }
+
+            .hamburger-list{
+                a{
+                    color:white;
+                    padding: 15px;
+                    text-decoration: none;
+                    font-family: $font;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+             }
+        }
+
+        main{
+
+            /*EN TODAS LAS PESTAÑAS SE REPITE EL MISMO H2*/
+            h2{
+                font-size: 15px;
+            }              
+
+            /*MAIN PRODUCTOS*/
+
+            .cart-button{
+                font-size: 10px;
+                @include sizes(40px, 110px);
+            }
+
+            .h3-productos{
+                font-size: 15px;
+                margin-bottom: 5px;
+                margin-top: 5px;
+            } 
+
+            .price{
+                font-size: 15px;
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
+
+            /*MAIN HISTORIA*/
+
+            /*Historia de Vestiditos*/
+            .historia{
+                max-width: 280px;
+                padding: 5px;
+
+                p{
+                    font-size: 10px;
+                }
+            }
+
+            /*"Ten coraje y se amable"*/
+            .quotes img{
+                width: 100%;
+                max-width: 280px;
+            }
+
+            /*Firma Julia*/
+            .signature img{
+                width: 100%;
+                max-width: 140px;
+            }   
+
+            /*MAIN CUENTA*/
+
+            /*Formulario de Iniciar Sesión y Crear Cuenta*/
+            .form-floating{
+                max-width: 100px;
+                margin:auto;
+            }          
+
+            /*MAIN CARRITO*/
+
+            .main__tabla{
+                @include sizes(30px, 200px);
+                padding: 10px;
+
+                tr{
+                    th{
+                        font-size: 10px;
+                    }
+                    td{
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            /*Productos en Carrito*/
+            .productos{
+                padding: 5px;
+            }
+
+            /*Info de Producto*/
+            .h3-carrito{
+                font-size: 10px;
+            }
+
+            /*Tachito*/
+            .trash{
+                padding: 1px 5px;
+            }
+
+            /*LO SIGUIENTE SE REPITE EN MÁS DE UNA PESTAÑA, PERO NO EN TODAS*/
+
+            /*Todos los Botones*/
+            .button-2{
+                font-size: 10px;
+                @include sizes(100%, 100%);
+                padding: 5px;
+            }
+            
+            .button-3{
+                text-decoration: none;
+                font-size: 10px;
+                text-transform: uppercase;
+                text-decoration: none;
+                @include sizes(40px, 110px);
+
+                &:hover{
+                    text-decoration: none;
+                }
+            }  
+
+            .button-4{
+                font-size: 10px;
+                @include sizes(40px, 110px);
+            }
+
+            .benefits img{
+                max-width: 280px;
+            }           
+        }
+
+        /*TODAS LAS PESTAÑAS REPITEN EL MISMO FOOTER*/
+        
+        footer{
+            position: relative;
+            bottom: 0px;
+            
+            /*Container del Footer*/
+            .container-footer{
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            .container-footer .box{
+                margin: 5px 0;
+            }
+            
+            /*Subtítulo de Footer*/
+            h5{
+                font-size: 10px;
+            }
+            
+            /*Mini Historia de Vestiditos*/
+            .left .content-footer p{
+                text-align: justify;
+                color: white;
+                font-size: 8px;
+                font-family: $font;
+                padding: 1px;
+            }
+
+            .left .content-footer .social{
+                a{
+                    span{
+                        @include sizes(24px, 24px);
+                        line-height: 24px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            /*Dirección, Teléfono y Email*/
+            .center .content-footer .fas{
+                font-size: 12px;
+                @include sizes(24px, 24px);
+                line-height: 24px;
+            }
+
+            .center .content-footer .text-footer{
+                font-size: 8px;
+                padding-left: 10px;
+                color: white;
+                font-family: $font;
+            }  
+
+            /*Contacto*/
+            .right form .text-footer{
+                font-size: 8px;
+                margin-bottom: 2px;
+                color: white;
+                font-family: $font;
+            }
+
+            .right form .button-footer{
+                margin-top: 10px;
+        
+                button{
+                    height: 40px;
+                    max-width: 240px;
+                    border: none;
+                    outline: none;
+                    background: $petroleo;
+                    font-size: 8px;
+                    cursor: pointer;
+                    transition: .3s;
+                    color:white;
+                    font-family: $font;
+        
+                    &:hover{
+                        background: $magenta;
+                    }
+                }  
+            }
+
+            /*Créditos*/
+            .bottom-footer{
+                padding: 1px;
+        
+                span{
+                    font-size: 7px;
+                }
+            }
+        }
+    } 
+}  
+
+/*TABLET*/
+@media (max-width: 1024px){
+
+    body{
+
+        /*Portada*/
+        h1{
+            min-height: 35vh;
+            font-size: 45px;
+        }      
+
+        .benefits img{
+            max-width: 500px;
+        }       
+
+        header{
+
+            /*Menú Desktop*/
+            .desktop-menu{
+                font-size: 16px;
+
+                a{
+                    color:white;
+                    padding: 20px;
+                    text-decoration: none;
+                    height: 65px;
+
+                    &:hover{
+                        color: white;
+                        background-color: $rosa;
+                        height: 100px;
+                        transition: height 2s;
+                    }
+                }           
+            }
+        }
+
+        main{
+
+            /*MAIN CUENTA*/
+
+            /*Formulario de Iniciar Sesión y Crear Cuenta*/
+            .form-floating{
+                margin: auto;
+                max-width: 500px;
+            }         
+        }
+
+        /*TODAS LAS PESTAÑAS REPITEN EL MISMO FOOTER*/
+        footer{
+            
+            /*Mini Historia de Vestiditos*/
+            .left .content-footer p{
+                font-size: 10px;
+                padding-right: 1px;
+            }
+
+            .left .content-footer .social{
+                a{
+                    span{
+                        @include sizes(22px, 22px);
+                        line-height: 22px;
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            /*Dirección, Teléfono y Email*/
+            .center .content-footer .text-footer{
+                font-size: 10px;
+                padding-left: 1px;
+            } 
+
+            .center .content-footer .fas{
+                @include sizes(22px, 22px);
+                line-height: 22px;
+                font-size: 11px;
+            }
+
+            /*Contacto*/
+            .right form .text-footer{
+                font-size: 10px;
+                width: 50px;
+            }
+
+            .right form .button-footer{
+        
+                button{
+                    font-size: 10px;
+                    width: 100px;
+                }  
+            }
+
+            /*Créditos*/
+            .bottom-footer{
+                span{
+                    font-size: 9px;
+                }
+            }
+        }
+    }
+}
+
+/*MEDIA PARA GALERÍA DE FOTOS EN PESTAÑA PRODUCTOS*/
+@media screen and (min-width: 590px) {
+            
+    .container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+   
+@media screen and (min-width: 960px) {
+    
+    .container{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+}

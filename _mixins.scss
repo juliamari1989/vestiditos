@@ -1,0 +1,16 @@
+/*Mixins*/
+@mixin sizes($height, $width){
+    height: $height;
+    width: $width;
+ }
+
+@mixin fuente ($background-color, $border-color, $color, $font-family, $font-size, $text-transform, $text-decoration, $text-align){
+    background-color: $background-color;
+    border-color: $border-color;
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    text-transform: $text-transform;
+    text-decoration: $text-decoration;
+    text-align: $text-align;
+}

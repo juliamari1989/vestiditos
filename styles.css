@@ -1,17 +1,389 @@
 @charset "UTF-8";
+/*Variables*/
+/*Mixins*/
+/*LO SIGUIENTE SE REPITE EN MÁS DE UNA PESTAÑA, PERO NO EN TODAS*/
+/*Todos los Botones*/
+.button {
+  border-color: #007886;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.classic-button {
+  background-color: #007886;
+  border-color: #007886;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  height: 40px;
+  width: 240px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.classic-button:hover {
+  background-color: #a1304e;
+  border-color: #a1304e;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.rare-button {
+  background-color: #E8B0A7;
+  border-color: #E8B0A7;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  height: 40px;
+  width: 240px;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.rare-button:hover {
+  background-color: #a1304e;
+  border-color: #a1304e;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+/*Beneficios: Envío Gratis, Cuotas y Envíos en 24h.*/
+.benefits {
+  text-align: center;
+  width: 100%;
+}
+
+/*TODAS LAS PESTAÑAS REPITEN EL MISMO HEADER*/
+header {
+  width: 300;
+  background: #007886;
+  /*Menú Desktop*/
+  /*Menú Hamburguesa*/
+}
+
+header .desktop-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: center;
+  background-color: #007886;
+  border-color: #007886;
+  color: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+header .desktop-menu a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  height: 65px;
+}
+
+header .desktop-menu a:hover {
+  color: white;
+  background-color: #E8B0A7;
+  height: 100px;
+  -webkit-transition: height 2s;
+  transition: height 2s;
+}
+
+header .desktop-menu a .fas {
+  font-size: 20px;
+}
+
+header .hamburger-menu {
+  display: none;
+}
+
+header .hamburger-list {
+  display: none;
+}
+
+header .hamburger-list li {
+  list-style: none;
+}
+
+header .hamburger-list li a {
+  text-decoration: none;
+}
+
+header input:checked ~ ul {
+  display: block;
+}
+
+header input {
+  display: none;
+}
+
+/*TODAS LAS PESTAÑAS REPITEN EL MISMO FOOTER*/
+footer {
+  bottom: 0px;
+  width: 100%;
+  background: #E8B0A7;
+  /*Contenedor de Footer*/
+  /*Subtítulos de Footer*/
+  /*Mini Historia de Vestiditos y Redes*/
+  /*Dirección, Teléfono y Email*/
+  /*Contacto*/
+  /*Créditos*/
+}
+
+footer .container-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .container-footer .box {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+footer .content-footer {
+  max-width: 450px;
+  width: 100%;
+}
+
+footer h5 {
+  background-color: none;
+  border-color: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+footer .left .content-footer p {
+  background-color: none;
+  border-color: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: none;
+  text-decoration: none;
+  text-align: justify;
+  padding-right: 70px;
+}
+
+footer .left .content-footer p::first-letter {
+  text-transform: uppercase;
+}
+
+footer .left .content-footer .social {
+  margin: 8px 0 0 0;
+}
+
+footer .left .content-footer .social a {
+  padding: 0 2px;
+}
+
+footer .left .content-footer .social a span {
+  height: 40px;
+  width: 40px;
+  background: #007886;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+}
+
+footer .left .content-footer .social a span:hover {
+  background: #a1304e;
+}
+
+footer .center .content-footer .fas {
+  font-size: 20px;
+  background: #007886;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  color: white;
+}
+
+footer .center .content-footer .fas:hover {
+  background: #a1304e;
+}
+
+footer .center .content-footer .text-footer {
+  background-color: none;
+  border-color: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: none;
+  text-decoration: none;
+  text-align: none;
+  padding-left: 10px;
+}
+
+footer .text-footer {
+  text-transform: capitalize;
+}
+
+footer .center .content-footer .phone-footer {
+  margin: 15px 0;
+}
+
+footer .right form .text-footer {
+  background-color: none;
+  border-color: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: none;
+  margin-bottom: 2px;
+}
+
+footer .right form .message-footer {
+  margin-top: 10px;
+}
+
+footer .right form input, footer .right form textarea {
+  background-color: white;
+  border-color: white;
+  color: #007886;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: none;
+  text-decoration: none;
+  text-align: none;
+  width: 100%;
+  padding-left: 10px;
+  border: 1px solid white;
+}
+
+footer .right form input:focus, footer .right form textarea:focus {
+  outline-color: #E8B0A7;
+}
+
+footer .right form input {
+  height: 35px;
+}
+
+footer .right form .button-footer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+footer .right form .button-footer button {
+  height: 40px;
+  width: 400px;
+  background-color: #007886;
+  border-color: #007886;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 5px;
+}
+
+footer .right form .button-footer button:hover {
+  background: #a1304e;
+}
+
+footer .bottom-footer {
+  background-color: #007886;
+  border-color: #007886;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+}
+
+footer .bottom-footer span {
+  color: white;
+  font-size: 10px;
+}
+
+footer .bottom-footer a {
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+}
+
+footer .bottom-footer a:hover {
+  text-decoration: underline;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-/*Variables*/
-/*Mixins*/
 /*ESTILO DESKTOP*/
 body {
-  /*TODAS LAS PESTAÑAS REPITEN PROMO, PORTADA Y HEADER*/
+  /*TODAS LAS PESTAÑAS REPITEN PROMO y PORTADA*/
   /*Promo de 3x2*/
   /*Portada*/
-  /*TODAS LAS PESTAÑAS REPITEN EL MISMO FOOTER*/
 }
 
 body .ad-promo {
@@ -71,79 +443,6 @@ body h1:hover {
   }
 }
 
-body header {
-  width: 300;
-  background: #007886;
-  /*Menú Desktop*/
-  /*Menú Hamburguesa*/
-}
-
-body header .desktop-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-position: center;
-  background-color: #007886;
-  border-color: #007886;
-  color: none;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-}
-
-body header .desktop-menu a {
-  color: white;
-  padding: 20px;
-  text-decoration: none;
-  height: 65px;
-}
-
-body header .desktop-menu a:hover {
-  color: white;
-  background-color: #E8B0A7;
-  height: 100px;
-  -webkit-transition: height 2s;
-  transition: height 2s;
-}
-
-body header .desktop-menu a .fas {
-  padding-top: 5px;
-  font-size: 20px;
-}
-
-body header .hamburger-menu {
-  display: none;
-}
-
-body header .hamburger-list {
-  display: none;
-}
-
-body header .hamburger-list li {
-  list-style: none;
-}
-
-body header .hamburger-list li a {
-  text-decoration: none;
-}
-
-body header input:checked ~ ul {
-  display: block;
-}
-
-body header input {
-  display: none;
-}
-
 body main {
   /*TODAS LAS PESTAÑAS REPITEN EL MISMO H2*/
   /*MAIN INDEX*/
@@ -165,9 +464,6 @@ body main {
   /*Productos en Carrito*/
   /*Info de Producto*/
   /*Tachito*/
-  /*LO SIGUIENTE SE REPITE EN MÁS DE UNA PESTAÑA, PERO NO EN TODAS*/
-  /*Todos los Botones*/
-  /*Beneficios: Envío Gratis, Cuotas y Envíos en 24h.*/
 }
 
 body main h2 {
@@ -503,295 +799,6 @@ body main .fa {
   margin-right: 5px;
 }
 
-body main .button {
-  border-color: #007886;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-body main .classic-button {
-  background-color: #007886;
-  border-color: #007886;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  height: 40px;
-  width: 235px;
-  border: none;
-  outline: none;
-  padding-top: 2px;
-}
-
-body main .classic-button:hover {
-  background-color: #a1304e;
-  border-color: #a1304e;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-}
-
-body main .rare-button {
-  background-color: #E8B0A7;
-  border-color: #E8B0A7;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  height: 40px;
-  width: 235px;
-  border: none;
-  outline: none;
-  padding-top: 2px;
-}
-
-body main .rare-button:hover {
-  background-color: #a1304e;
-  border-color: #a1304e;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-}
-
-body main .benefits {
-  text-align: center;
-  width: 100%;
-}
-
-body footer {
-  bottom: 0px;
-  width: 100%;
-  background: #E8B0A7;
-  /*Contenedor de Footer*/
-  /*Subtítulos de Footer*/
-  /*Mini Historia de Vestiditos y Redes*/
-  /*Dirección, Teléfono y Email*/
-  /*Contacto*/
-  /*Créditos*/
-}
-
-body footer .container-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body footer .container-footer .box {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  padding: 10px 20px;
-}
-
-body footer .content-footer {
-  max-width: 450px;
-  width: 100%;
-}
-
-body footer h5 {
-  background-color: none;
-  border-color: none;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-body footer .left .content-footer p {
-  background-color: none;
-  border-color: none;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: none;
-  text-decoration: none;
-  text-align: justify;
-  padding-right: 70px;
-}
-
-body footer .left .content-footer p::first-letter {
-  text-transform: uppercase;
-}
-
-body footer .left .content-footer .social {
-  margin: 8px 0 0 0;
-}
-
-body footer .left .content-footer .social a {
-  padding: 0 2px;
-}
-
-body footer .left .content-footer .social a span {
-  height: 40px;
-  width: 40px;
-  background: #007886;
-  line-height: 40px;
-  text-align: center;
-  font-size: 20px;
-  border-radius: 5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: white;
-}
-
-body footer .left .content-footer .social a span:hover {
-  background: #a1304e;
-}
-
-body footer .center .content-footer .fas {
-  font-size: 20px;
-  background: #007886;
-  height: 45px;
-  width: 45px;
-  line-height: 45px;
-  text-align: center;
-  border-radius: 50%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  cursor: pointer;
-  color: white;
-}
-
-body footer .center .content-footer .fas:hover {
-  background: #a1304e;
-}
-
-body footer .center .content-footer .text-footer {
-  background-color: none;
-  border-color: none;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: none;
-  text-decoration: none;
-  text-align: none;
-  padding-left: 10px;
-}
-
-body footer .text-footer {
-  text-transform: capitalize;
-}
-
-body footer .center .content-footer .phone-footer {
-  margin: 15px 0;
-}
-
-body footer .right form .text-footer {
-  background-color: none;
-  border-color: none;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: capitalize;
-  text-decoration: none;
-  text-align: none;
-  margin-bottom: 2px;
-}
-
-body footer .right form .message-footer {
-  margin-top: 10px;
-}
-
-body footer .right form input, body footer .right form textarea {
-  background-color: white;
-  border-color: white;
-  color: #007886;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: none;
-  text-decoration: none;
-  text-align: none;
-  width: 100%;
-  padding-left: 10px;
-  border: 1px solid white;
-}
-
-body footer .right form input:focus, body footer .right form textarea:focus {
-  outline-color: #E8B0A7;
-}
-
-body footer .right form input {
-  height: 35px;
-}
-
-body footer .right form .button-footer {
-  margin-top: 10px;
-  text-align: center;
-}
-
-body footer .right form .button-footer button {
-  height: 40px;
-  width: 400px;
-  background-color: #007886;
-  border-color: #007886;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  text-transform: capitalize;
-  text-decoration: none;
-  text-align: center;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-body footer .right form .button-footer button:hover {
-  background: #a1304e;
-}
-
-body footer .bottom-footer {
-  background-color: #007886;
-  border-color: #007886;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-  text-transform: none;
-  text-decoration: none;
-  text-align: center;
-  padding: 5px;
-  width: 100%;
-}
-
-body footer .bottom-footer span {
-  color: white;
-  font-size: 10px;
-}
-
-body footer .bottom-footer a {
-  color: white;
-  text-decoration: none;
-  text-transform: none;
-}
-
-body footer .bottom-footer a:hover {
-  text-decoration: underline;
-}
-
 /*MOBILE*/
 @media (max-width: 480px) {
   body {
@@ -1116,7 +1123,7 @@ body footer .bottom-footer a:hover {
   }
 }
 
-/*MEDIA PARA GALERÍA DE FOTOS EN PESTAÑA PRODUCTOS*/
+/*MEDIAS QUERIES PARA GALERÍA DE FOTOS EN PESTAÑA PRODUCTOS*/
 @media screen and (min-width: 590px) {
   .container {
     -ms-grid-columns: (1fr)[2];

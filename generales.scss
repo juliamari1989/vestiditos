@@ -1,0 +1,46 @@
+/*LO SIGUIENTE SE REPITE EN MÁS DE UNA PESTAÑA, PERO NO EN TODAS*/
+
+/*Todos los Botones*/
+.button{
+    border-color: $petroleo;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}       
+
+.classic-button{
+    @include fuente ($petroleo, $petroleo, white, $family, 15px, uppercase, none, center);
+    @include sizes(40px, 240px);
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px;
+
+    &:hover{
+        @include fuente ($magenta, $magenta, white, $family, 15px, uppercase, none, center);
+    }
+}        
+
+.rare-button{
+    @include fuente ($rosa, $rosa, white, $family, 15px, uppercase, none, center);
+    @include sizes(40px, 240px);
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+
+
+    &:hover{
+        @include fuente ($magenta, $magenta, white, $family, 15px, uppercase, none, center);
+    }
+}        
+
+/*Beneficios: Envío Gratis, Cuotas y Envíos en 24h.*/
+.benefits{
+    text-align: center;
+    width: 100%;
+}             

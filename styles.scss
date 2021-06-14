@@ -7,7 +7,9 @@
 $rosa: #E8B0A7;
 $petroleo: #007886;
 $magenta: #a1304e;
-$font: 'Montserrat', sans-serif;
+$family: 'Montserrat', sans-serif;
+$shadow-productos: 0 0 5px 0 rgba(0,0,0,.095);
+$background-productos: rgba(179, 229, 252, .1);
 
 /*Mixins*/
 @mixin sizes($height, $width){
@@ -15,7 +17,18 @@ $font: 'Montserrat', sans-serif;
     width: $width;
  }
 
-/*DESKTOP*/
+@mixin fuente ($background-color, $border-color, $color, $font-family, $font-size, $text-transform, $text-decoration, $text-align){
+    background-color: $background-color;
+    border-color: $border-color;
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    text-transform: $text-transform;
+    text-decoration: $text-decoration;
+    text-align: $text-align;
+}
+
+/*ESTILO DESKTOP*/
 body{
 
     /*TODAS LAS PESTAÑAS REPITEN PROMO, PORTADA Y HEADER*/
@@ -27,11 +40,7 @@ body{
         text-align: center;
 
         a{
-            text-decoration: none;
-            color: white;
-            font-family: $font;
-            text-transform: uppercase;
-            font-size: 13px;  
+            @include fuente (none, none, white, $family, 13px, uppercase, none, center);
         }
     }
 
@@ -75,10 +84,7 @@ body{
             flex-direction: row;
             justify-content: center;
             background-position: center;
-            background-color: $petroleo;
-            font-size: 20px;
-            font-family: $font;
-            text-transform: uppercase;
+            @include fuente ($petroleo, $petroleo, none, $family, 20px, uppercase, none, center);
 
             a{
                 color:white;
@@ -131,15 +137,10 @@ body{
         /*TODAS LAS PESTAÑAS REPITEN EL MISMO H2*/
 
         h2{
-            text-align: center;
-            color: $petroleo;
-            text-decoration: none;
             word-spacing: 3px;
-            font-family: $font;
-            font-size: 20px;
             margin-bottom: 20px;
             margin-top: 20px;
-            text-transform: uppercase;
+            @include fuente (none, none, $petroleo, $family, 20px, uppercase, none, center);
         }
 
         /*MAIN INDEX*/
@@ -173,14 +174,14 @@ body{
         .producto-petroleo{
             background-color: $petroleo;
             cursor: pointer;
-            box-shadow: 0 0 5px 0 rgba(0,0,0,.095); 
+            box-shadow: $shadow-productos; 
             transition: all 300ms;
             position: relative;
         }  
 
         .producto-petroleo::after {
             content: "";
-            background-color: rgba(179, 229, 252, .1);
+            background-color: $background-productos;
             @include sizes(100%, 100%);
             position: absolute;
             top:0;
@@ -203,14 +204,14 @@ body{
         .producto-magenta{
             background-color: $magenta;
             cursor: pointer;
-            box-shadow: 0 0 5px 0 rgba(0,0,0,.095);            
+            box-shadow: $shadow-productos;            
             transition: all 300ms;           
             position: relative;
         }   
 
         .producto-magenta::after {
             content: "";
-            background-color: rgba(179, 229, 252, .1);
+            background-color: $background-productos;
             @include sizes(100%, 100%);
             position: absolute;
             top:0;
@@ -233,14 +234,14 @@ body{
         .producto-rosa{
             background-color: $rosa;
             cursor: pointer;
-            box-shadow: 0 0 5px 0 rgba(0,0,0,.095);
+            box-shadow: $shadow-productos;
             transition: all 300ms;
             position: relative;
         } 
 
          .producto-rosa::after {
             content: "";
-            background-color: rgba(179, 229, 252, .1);
+            background-color: $background-productos;
             @include sizes(100%, 100%);
             position: absolute;
             top:0;
@@ -270,65 +271,27 @@ body{
         }  
 
         .h3-productos{
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            word-spacing: 3px;
-            font-family: $font;
-            font-size: 25px;
+            @include fuente (none, none, white, $family, 25px, uppercase, none, center);
             margin-bottom: 20px;
             margin-top: 20px;
-            text-transform: uppercase;
         }
 
         .price{
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            word-spacing: 3px;
-            font-family: $font;
-            font-size: 20px;
+            @include fuente (none, none, white, $family, 20px, uppercase, none, center);
             margin-bottom: 20px;
             margin-top: 20px;
-            text-transform: uppercase;
-        }
-
-        /*Botón para ir a Carrito*/
-        .cart-button{
-            color: white;
-            background-color: $petroleo;
-            border-color: $petroleo;
-            font-family: $font;
-            font-size: 16px;
-            text-transform: uppercase;
-            text-decoration: none;
-            @include sizes(40px, 300px);
-            margin-top: 10px;
-            margin-bottom: 10px;
-            text-align: center;
-            padding-top: 10px;
-
-            &:hover{
-                color: white;
-                background-color: $magenta;
-                border-color: $magenta;
-                text-decoration: none;
-            }
         }
 
         /*MAIN HISTORIA*/
         
         /*Historia de Vestiditos*/
         .historia{
-
             text-align: center;
             margin: auto;
             max-width: 580px;
 
             p{
-                font-size: 12px;
-                font-family: $font;
-                text-align: justify;
+                @include fuente (none, none, $petroleo, $family, 12px, none, none, justify);
                 margin: auto;
             }
         }
@@ -359,14 +322,8 @@ body{
 
         /*Tabla de Talles*/
         h4{
-            text-align: center;
-            color: $petroleo;
-            text-decoration: none;
-            word-spacing: 3px;
-            font-family: $font;
-            font-size: 12px;
+            @include fuente (none, none, $petroleo, $family, 12px, uppercase, none, center);
             padding-top: 10px;
-            text-transform: uppercase;
         }
 
         .main__tabla{
@@ -376,12 +333,11 @@ body{
 
             tr{
                 th{
-                    color: white;
-                    background-color: $magenta;
-                    font-size: 15px;
+                    @include fuente ($magenta, $magenta, white, $family, 15px, uppercase, none, center);
                 }
+                
                 td{
-                    font-size: 14px;
+                    @include fuente (none, none, $petroleo, $family, 12px, uppercase, none, center);
                 }
             }
         }
@@ -428,13 +384,7 @@ body{
         }
 
         .h3-carrito{
-            text-align: center;
-            color:$petroleo;
-            text-decoration: none;
-            word-spacing: 3px;
-            font-family: $font;
-            font-size: 16px;
-            text-transform: uppercase;
+            @include fuente (none, none, $petroleo, $family, 16px, uppercase, none, center);
         }
 
         /*Tachito*/
@@ -462,8 +412,9 @@ body{
 
         /*LO SIGUIENTE SE REPITE EN MÁS DE UNA PESTAÑA, PERO NO EN TODAS*/
 
-        /*Botones*/
+        /*Todos los Botones*/
         .button{
+            border-color: $petroleo;
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -472,65 +423,28 @@ body{
             margin-bottom: 10px;
         }
 
-        .button-2{
-            color: white;
-            background-color: $petroleo;
-            border-color: $petroleo;
-            font-family: $font;
-            font-size: 16px;
-            text-transform: uppercase;
-            text-decoration: none;
-            @include sizes(40px, 300px);
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .classic-button{
+            @include fuente ($petroleo, $petroleo, white, $family, 15px, uppercase, none, center);
+            @include sizes(40px, 235px);
+            border: none;
+            outline: none;
+            padding-top: 2px;
 
             &:hover{
-                color: white;
-                background-color: $magenta;
-                border-color: $magenta;
-                text-decoration: none;
+                @include fuente ($magenta, $magenta, white, $family, 15px, uppercase, none, center);
             }
         }
 
-        .button-3{
-            color: white;
-            background-color: $petroleo;
-            border-color: $petroleo;
-            text-decoration: none;
-            font-family: $font;
-            font-size: 16px;
-            text-transform: uppercase;
-            text-decoration: none;
-            @include sizes(40px, 200px);
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .rare-button{
+            @include fuente ($rosa, $rosa, white, $family, 15px, uppercase, none, center);
+            @include sizes(40px, 235px);
+            border: none;
+            outline: none;
+            padding-top: 2px;
+
 
             &:hover{
-                color: white;
-                background-color: $magenta;
-                border-color: $magenta;
-                text-decoration: none;
-            }
-        }
-
-        .button-4{
-            color: white;
-            background-color: $rosa;
-            border-color: $rosa;
-            text-decoration: none;
-            font-family: $font;
-            font-size: 16px;
-            text-transform: uppercase;
-            text-decoration: none;
-            @include sizes(40px, 200px);
-            margin-top: 10px;
-            margin-bottom: 10px;
-
-            &:hover{
-                color: white;
-                background-color: $magenta;
-                border-color: $magenta;
-                text-decoration: none;
+                @include fuente ($magenta, $magenta, white, $family, 15px, uppercase, none, center);
             }
         }
 
@@ -566,20 +480,14 @@ body{
     
         /*Subtítulos de Footer*/
         h5{
-            font-size: 15px;
-            color: white;
-            text-transform: uppercase;
-            font-family: $font;
+            @include fuente (none, none, white, $family, 15px, uppercase, none, none);
             margin-top: 20px;
             margin-bottom: 20px;
         }
     
         /*Mini Historia de Vestiditos y Redes*/
         .left .content-footer p{
-            text-align: justify;
-            color: white;
-            font-size: 12px;
-            font-family: $font;
+            @include fuente (none, none, white, $family, 12px, none, none, justify);
             padding-right: 70px;
 
             &::first-letter{
@@ -628,11 +536,8 @@ body{
         }
 
         .center .content-footer .text-footer{
-            font-size: 12px;
+            @include fuente (none, none, white, $family, 12px, none, none, none);
             padding-left: 10px;
-            color: white;
-            font-family: $font;
-            text-transform: none;
         }
 
         .text-footer{
@@ -645,10 +550,8 @@ body{
     
         /*Contacto*/
         .right form .text-footer{
-            font-size: 12px;
+            @include fuente (none, none, white, $family, 12px, capitalize, none, none);
             margin-bottom: 2px;
-            color: white;
-            font-family: $font;
         }
 
         .right form .message-footer{
@@ -656,9 +559,8 @@ body{
         }
 
         .right form input, .right form textarea{
+            @include fuente (white, white, $petroleo, $family, 12px, none, none, none);
             width: 100%;
-            font-size: 12px;
-            background: white;
             padding-left: 10px;
             border: 1px solid white;
         }
@@ -677,15 +579,11 @@ body{
     
             button{
                 @include sizes(40px, 400px);
+                @include fuente ($petroleo, $petroleo, white, $family, 12px, capitalize, none, center);
                 border: none;
                 outline: none;
-                background: $petroleo;
-                font-size: 12px;
                 cursor: pointer;
                 transition: .3s;
-                color:white;
-                font-family: $font;
-                text-transform: capitalize;
     
                 &:hover{
                     background: $magenta;
@@ -695,10 +593,8 @@ body{
     
         /*Créditos*/
         .bottom-footer{
+            @include fuente ($petroleo, $petroleo, white, $family, 10px, none, none, center);
             padding: 5px;
-            background: $petroleo;
-            text-align: center;
-            font-family: $font;
             width: 100%;
     
             span{
@@ -763,7 +659,7 @@ body{
                     color:white;
                     padding: 15px;
                     text-decoration: none;
-                    font-family: $font;
+                    font-family: $family;
                     font-size: 12px;
                     text-transform: uppercase;
                 }
@@ -860,34 +756,33 @@ body{
             }
 
             /*LO SIGUIENTE SE REPITE EN MÁS DE UNA PESTAÑA, PERO NO EN TODAS*/
-
             /*Todos los Botones*/
-            .button-2{
-                font-size: 10px;
-                @include sizes(100%, 100%);
-                padding: 5px;
-            }
-            
-            .button-3{
-                text-decoration: none;
-                font-size: 10px;
-                text-transform: uppercase;
-                text-decoration: none;
-                @include sizes(40px, 110px);
+
+            .classic-button{
+                @include fuente ($petroleo, $petroleo, white, $family, 10px, uppercase, none, center);
+                width: 100%;
+                max-width: 180px;
+                max-height: 30px;
 
                 &:hover{
-                    text-decoration: none;
+                    @include fuente ($magenta, $magenta, white, $family, 10px, uppercase, none, center);
                 }
-            }  
-
-            .button-4{
-                font-size: 10px;
-                @include sizes(40px, 110px);
             }
 
-            .benefits img{
-                max-width: 280px;
-            }           
+            .rare-button{
+                @include fuente ($rosa, $rosa, white, $family, 10px, uppercase, none, center);
+                width: 100%;
+                max-width: 180px;
+                max-height: 30px;
+
+                &:hover{
+                    @include fuente ($magenta, $magenta, white, $family, 10px, uppercase, none, center);
+                }
+            }
+
+                .benefits img{
+                    max-width: 280px;
+                }           
         }
 
         /*TODAS LAS PESTAÑAS REPITEN EL MISMO FOOTER*/
@@ -916,7 +811,7 @@ body{
                 text-align: justify;
                 color: white;
                 font-size: 8px;
-                font-family: $font;
+                font-family: $family;
                 padding: 1px;
             }
 
@@ -941,7 +836,7 @@ body{
                 font-size: 8px;
                 padding-left: 10px;
                 color: white;
-                font-family: $font;
+                font-family: $family;
             }  
 
             /*Contacto*/
@@ -949,7 +844,7 @@ body{
                 font-size: 8px;
                 margin-bottom: 2px;
                 color: white;
-                font-family: $font;
+                font-family: $family;
             }
 
             .right form .button-footer{
@@ -965,7 +860,7 @@ body{
                     cursor: pointer;
                     transition: .3s;
                     color:white;
-                    font-family: $font;
+                    font-family: $family;
         
                     &:hover{
                         background: $magenta;

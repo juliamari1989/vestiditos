@@ -61,8 +61,7 @@ body{
 
         h2{
             word-spacing: 3px;
-            margin-bottom: 20px;
-            margin-top: 20px;
+            padding: 20px 0 0;
             @include fuente (none, none, $petroleo, $family, 20px, uppercase, none, center);
         }
 
@@ -76,7 +75,7 @@ body{
         }
 
         .row{
-            margin-top: 20px;
+            margin: 0;
         }
 
         /*MAIN PRODUCTOS*/
@@ -388,9 +387,9 @@ body{
 
             /*EN TODAS LAS PESTAÑAS SE REPITE EL MISMO H2*/
             h2{
-                font-size: 15px;
+                font-size: 12px;
             }              
-
+            
             /*MAIN PRODUCTOS*/
 
             .cart-button{
@@ -474,8 +473,8 @@ body{
             }
 
             /*LO SIGUIENTE SE REPITE EN MÁS DE UNA PESTAÑA, PERO NO EN TODAS*/
+            
             /*Todos los Botones*/
-
             .classic-button{
                 @include fuente ($petroleo, $petroleo, white, $family, 10px, uppercase, none, center);
                 width: 100%;
@@ -498,9 +497,9 @@ body{
                 }
             }
 
-                .benefits img{
-                    max-width: 280px;
-                }           
+            .benefits img{
+                display: none;
+            }           
         }
 
         /*TODAS LAS PESTAÑAS REPITEN EL MISMO FOOTER*/
@@ -636,7 +635,7 @@ body{
         }
 
         main{
-
+                        
             /*MAIN CUENTA*/
 
             /*Formulario de Iniciar Sesión y Crear Cuenta*/
